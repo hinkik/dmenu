@@ -10,10 +10,7 @@ static int min_width = 500;                    /* minimum width when centered */
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static char font[] = "monospace:size=10";
-static const char *fonts[] = {
-	font,
-	"monospace:size=10",
-};
+static const char *fonts[] = { font };
 
 static char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 

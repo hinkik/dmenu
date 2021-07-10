@@ -3,8 +3,8 @@
 
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 static int barvpadding = 6;
-static int border_width = 0; /* needed for alpha patch */
-static const unsigned int alpha = 190;
+static int border_width = 0;
+static const float alpha = 0.8;
 static int centered = 0;                    /* -c option; centers dmenu on screen */
 static int min_width = 500;                    /* minimum width when centered */
 
@@ -25,10 +25,10 @@ static char *colors[SchemeLast][2] = {
 	[SchemeOut]  = { "#000000",   "#00ffff" },
 };
 
-static const unsigned int alphas[SchemeLast][2] = {
-	[SchemeNorm] = { OPAQUE, alpha },
-	[SchemeSel] = { OPAQUE, alpha },
-	[SchemeOut] = { OPAQUE, alpha },
+static const float alphas[SchemeLast][2] = {
+	[SchemeNorm] = { 1, alpha },
+	[SchemeSel] = { 1, alpha },
+	[SchemeOut] = { 1, alpha },
 };
 
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
